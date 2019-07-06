@@ -14,5 +14,14 @@ pipeline {
                     }
                     }
                     }
-                    }
-                    }
+        stage ('Test Stage'){
+            steps{
+                withMaven(maven : 'LocalMaven'){
+                    sh 'mvn test'
+                }
+            }
+        }
+    }
+}
+                    
+                    

@@ -1,5 +1,5 @@
 pipeline {
-    any agent
+    anyagent
     stages  {
          stage ('clone my code'){
            git 'https://github.com/kulmilind/maven-project'

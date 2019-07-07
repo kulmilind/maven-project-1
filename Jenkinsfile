@@ -32,7 +32,7 @@ pipeline {
             steps 
   {
   sshagent (credentials: ['8cb108d6-eb38-45a2-9736-0d3d841f3f13']) {
-    sh 'ssh -o StrictHostKeyChecking=no -l cloudbees 192.168.1.106 uname -a'
+    sh 'ssh -o StrictHostKeyChecking=no -l cloudbees 3.84.216.113 uname -a'
   }
   }
             }

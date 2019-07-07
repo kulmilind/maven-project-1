@@ -28,7 +28,7 @@ pipeline {
                 }
             }
       }
-        stage {
+        stage ('deployment'){
             steps {
   {
   sshagent (credentials: ['8cb108d6-eb38-45a2-9736-0d3d841f3f13']) {

@@ -30,6 +30,15 @@ pipeline {
             }
       }
         
+        stage ('deployment'){
+            steps 
+  {
+  sshagent (['tomcat']) {
+    sh 'ssh -o StrictHostKeyChecking=no */target/*.war ec2-user@3.83.98.162:/var/lib/tomcat/webapps'
+  }
+  }
+            }
+        
         
     }
 }
